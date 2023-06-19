@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(space.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* nav ul li a {
+  color: #fff;
+  text-decoration: none;
+} */
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  color: white;
+  
+}
+
+h3 {
+  color: white;
+  font: sans-serif;
+ 
+}
+
+p {
+  color: #555;
+}
+
+#flashcard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.flashcard {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.options li {
+  margin-bottom: 10px;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-color: #333;
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.next-button-container {
+  position: absolute;
+  bottom: 80px; /* Adjust the distance from the bottom as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+#next-button {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer a {
+  color:#fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .flashcard {
+    width: 90%; /* Adjust the width as needed for smaller screens */
+    height: auto; /* Allow the height to adjust based on content */
+    max-height: 500px; /* Limit the maximum height for smaller screens */
+  }
+
+  .front {
+    padding: 10px; /* Adjust the padding as needed for smaller screens */
+  }
+
+  .back {
+    font-size: 14px; /* Adjust the font size as needed for smaller screens */
+  }
+
+  .next-button-container {
+    position: relative; /* Reset the positioning for smaller screens */
+    margin-top: 20px; /* Adjust the margin as needed for smaller screens */
+  }
+}
+
+
+  
+  /* .flashcard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; 
+    height: 300px; 
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.3s;
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box; 
+  }
+  
+  .question {
+    margin-bottom: 20px;
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  
+  .options li {
+    margin-bottom: 10px;
+  }
+  
+  .back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    transform: rotateY(180deg);
+  }
+  
+  .flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .next-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  #next-button {
+    width: 200px;
+    padding: 10px; 
+    font-size: 16px; 
+  } */
+  
+  
