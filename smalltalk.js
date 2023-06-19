@@ -76,6 +76,8 @@ const questions = [
     "First think of a product. Now, what would be the absolute worst brand name for one of those products?",
     "What food makes you think of Minnesota",
     "Whats the most useless talen you have?",
+    "Have you ever used a scrub daddy before",
+    
     
 
 
