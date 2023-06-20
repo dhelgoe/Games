@@ -539,13 +539,7 @@ let flashcards = [
   
     const card = document.createElement("div");
     card.classList.add("flashcard");
-  
-    if (isTouchDevice()) {
-      card.addEventListener("touchend", () => flipCard(card));
-      card.addEventListener("touchstart", preventTouchScroll);
-    } else {
-      card.addEventListener("click", () => flipCard(card));
-    }
+    card.onclick = () => flipCard(card);
   
     const front = document.createElement("div");
     front.classList.add("front");
@@ -576,7 +570,13 @@ let flashcards = [
   }
   
   function flipCard(card) {
-    card.classList.toggle("flipped");
+    if (card.classList.contains("flipped")) {
+      // If the card is already flipped, remove the "flipped" class
+      card.classList.remove("flipped");
+    } else {
+      // If the card is not flipped, add the "flipped" class
+      card.classList.add("flipped");
+    }
   }
   
   function showNextFlashcard() {
@@ -585,14 +585,6 @@ let flashcards = [
       currentFlashcardIndex = 0; // Restart from the beginning
     }
     createFlashcard();
-  }
-  
-  function isTouchDevice() {
-    return "ontouchstart" in window || navigator.msMaxTouchPoints;
-  }
-  
-  function preventTouchScroll(event) {
-    event.preventDefault();
   }
   
   // Randomize the flashcards order
@@ -605,8 +597,4 @@ let flashcards = [
   const nextButton = document.getElementById("next-button");
   nextButton.addEventListener("click", showNextFlashcard);
   
-  if (isTouchDevice()) {
-    nextButton.addEventListener("touchend", showNextFlashcard);
-    nextButton.addEventListener("touchstart", preventTouchScroll);
-  }
   
