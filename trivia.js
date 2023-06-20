@@ -381,6 +381,74 @@ let flashcards = [
   // Add more question and answer pairs with options as needed
 ];
   
+  // function shuffleFlashcards() {
+  //   for (let i = flashcards.length - 1; i > 0; i--) {
+  //     const j = Math.floor(Math.random() * (i + 1));
+  //     [flashcards[i], flashcards[j]] = [flashcards[j], flashcards[i]];
+  //   }
+  // }
+  
+  // let currentFlashcardIndex = 0;
+
+  // function createFlashcard() {
+  //   const container = document.getElementById("flashcard-container");
+  //   container.innerHTML = ""; 
+  
+  //   const flashcard = flashcards[currentFlashcardIndex];
+  
+  //   const card = document.createElement("div");
+  //   card.classList.add("flashcard");
+  //   card.onclick = () => flipCard(card);
+
+  
+  //   const front = document.createElement("div");
+  //   front.classList.add("front");
+  
+  //   const question = document.createElement("div");
+  //   question.classList.add("question");
+  //   question.textContent = flashcard.question;
+  
+  //   const optionsContainer = document.createElement("ul");
+  //   optionsContainer.classList.add("options");
+  
+  //   flashcard.options.forEach(function(option) {
+  //     const optionItem = document.createElement("li");
+  //     optionItem.textContent = option;
+  //     optionsContainer.appendChild(optionItem);
+  //   });
+  
+  //   front.appendChild(question);
+  //   front.appendChild(optionsContainer);
+  
+  //   const back = document.createElement("div");
+  //   back.classList.add("back");
+  //   back.textContent = flashcard.answer;
+  
+  //   card.appendChild(front);
+  //   card.appendChild(back);
+  //   container.appendChild(card);
+  // }
+  // function flipCard(card) {
+  //   card.classList.toggle("flipped");
+  // }
+  
+  // function showNextFlashcard() {
+  //   currentFlashcardIndex++;
+  //   if (currentFlashcardIndex >= flashcards.length) {
+  //     currentFlashcardIndex = 0; 
+  //   }
+  //   createFlashcard();
+  // }
+ 
+  // shuffleFlashcards();
+  
+ 
+  // createFlashcard();
+  
+  // const nextButton = document.getElementById("next-button");
+  // nextButton.addEventListener("click", showNextFlashcard);
+  
+
   function shuffleFlashcards() {
     for (let i = flashcards.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -389,7 +457,7 @@ let flashcards = [
   }
   
   let currentFlashcardIndex = 0;
-
+  
   function createFlashcard() {
     const container = document.getElementById("flashcard-container");
     container.innerHTML = ""; // Clear previous flashcard
@@ -398,7 +466,9 @@ let flashcards = [
   
     const card = document.createElement("div");
     card.classList.add("flashcard");
-    card.onclick = () => flipCard(card);
+  
+    card.addEventListener("click", () => flipCard(card));
+    card.addEventListener("touchstart", () => flipCard(card));
   
     const front = document.createElement("div");
     front.classList.add("front");
@@ -410,7 +480,7 @@ let flashcards = [
     const optionsContainer = document.createElement("ul");
     optionsContainer.classList.add("options");
   
-    flashcard.options.forEach(function(option) {
+    flashcard.options.forEach(function (option) {
       const optionItem = document.createElement("li");
       optionItem.textContent = option;
       optionsContainer.appendChild(optionItem);
@@ -427,6 +497,7 @@ let flashcards = [
     card.appendChild(back);
     container.appendChild(card);
   }
+  
   function flipCard(card) {
     card.classList.toggle("flipped");
   }
@@ -448,5 +519,5 @@ let flashcards = [
   // Add event listener to the Next button
   const nextButton = document.getElementById("next-button");
   nextButton.addEventListener("click", showNextFlashcard);
+  nextButton.addEventListener("touchstart", showNextFlashcard);
   
-

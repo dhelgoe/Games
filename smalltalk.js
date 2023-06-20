@@ -24,8 +24,8 @@ const questions = [
     "Would you rather be a famous celebrity or the CEO of a successful company?",
     "What is your perfect date?",
     "What is your favorite type of restaurant?",
-    "Biggest turn on?",
-    "Biggest turn off?",
+    // "Biggest turn on?",
+    // "Biggest turn off?",
     "If you could go pro in one sport, what would you pick?",
     "If you could create one law, what would it be?",
     "Would you rather sit through a Star Wars marathon or a Lord of the Rings marathon?",
@@ -77,7 +77,7 @@ const questions = [
     "What food makes you think of Minnesota",
     "Whats the most useless talen you have?",
     "Have you ever used a scrub daddy before",
-    
+
     
 
 
