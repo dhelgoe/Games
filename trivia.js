@@ -533,7 +533,7 @@ let flashcards = [
   
   function createFlashcard() {
     const container = document.getElementById("flashcard-container");
-    container.innerHTML = ""; // Clear previous flashcard
+    container.innerHTML = ""; 
   
     const flashcard = flashcards[currentFlashcardIndex];
   
@@ -571,10 +571,10 @@ let flashcards = [
   
   function flipCard(card) {
     if (card.classList.contains("flipped")) {
-      // If the card is already flipped, remove the "flipped" class
+      
       card.classList.remove("flipped");
     } else {
-      // If the card is not flipped, add the "flipped" class
+      
       card.classList.add("flipped");
     }
   }
@@ -582,18 +582,18 @@ let flashcards = [
   function showNextFlashcard() {
     currentFlashcardIndex++;
     if (currentFlashcardIndex >= flashcards.length) {
-      currentFlashcardIndex = 0; // Restart from the beginning
+      currentFlashcardIndex = 0;
     }
     createFlashcard();
   }
   
-  // Randomize the flashcards order
+
   shuffleFlashcards();
   
-  // Initial flashcard creation
+  
   createFlashcard();
   
-  // Add event listener to the Next button
+
   const nextButton = document.getElementById("next-button");
   nextButton.addEventListener("click", showNextFlashcard);
   
