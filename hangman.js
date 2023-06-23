@@ -500,7 +500,7 @@ const words = [
   "Taser",
   "Lasso",
 ];
-const maxWrongGuesses = 6;
+const maxWrongGuesses = 8;
 let wrongGuesses = 0;
 let answer = "";
 let guessedLetters = [];

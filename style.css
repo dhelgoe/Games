@@ -93,6 +93,24 @@ nav ul li a:hover {
   footer a:hover {
     text-decoration: underline;
   }
+  .section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .earth-container {
+    flex-shrink: 0; /* Prevents the Earth container from shrinking */
+  }
+  
+  .earth-image {
+    width: 150px; /* Adjust the width as needed */
+    margin-right: 20px; /* Adjust the spacing between the image and content */
+  }
+  
+  .content {
+    flex-grow: 1; /* Allows the content to grow and fill remaining space */
+  }
+  
   
   @media (max-width: 768px) {
     /* Adjust the styles as needed to fit smaller screens */
