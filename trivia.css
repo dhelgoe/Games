@@ -192,89 +192,25 @@ footer a:hover {
   }
 }
 
+ 
+@media (max-width: 768px) {
+  /* Adjust the styles as needed to fit smaller screens */
+  header {
+    padding: 10px;
+  }
 
-  
-  /* .flashcard {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px; 
-    height: 300px; 
-    background-color: #f1f1f1;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transform-style: preserve-3d;
-    transition: transform 0.3s;
-  }
-  
-  .front,
-  .back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  
-  .front {
+  nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    height: 100%;
-    box-sizing: border-box; 
   }
-  
-  .question {
-    margin-bottom: 20px;
-    margin-left: auto; 
-    margin-right: auto; 
+
+  nav ul li {
+    margin: 0 5px;
   }
-  
-  .options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    margin-left: auto; 
-    margin-right: auto; 
-  }
-  
-  .options li {
-    margin-bottom: 10px;
-  }
-  
-  .back {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    background-color: #333;
-    transform: rotateY(180deg);
-  }
-  
-  .flipped {
-    transform: rotateY(180deg);
-  }
-  
-  .next-button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  #next-button {
-    width: 200px;
-    padding: 10px; 
-    font-size: 16px; 
-  } */
+}
+
+
   
   

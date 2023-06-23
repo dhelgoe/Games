@@ -138,3 +138,24 @@ body {
       font-size: 14px;
     }
   }
+
+  @media (max-width: 768px) {
+    /* Adjust the styles as needed to fit smaller screens */
+    header {
+      padding: 10px;
+    }
+  
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 0 5px;
+    }
+  }
+  
+  
+    
