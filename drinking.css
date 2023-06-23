@@ -5,11 +5,13 @@ html, body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
   
-    background-image: url(space.jpg);
+    background-image: url(drinkinggame.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     

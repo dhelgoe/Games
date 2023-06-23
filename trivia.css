@@ -1,7 +1,19 @@
-body {
+html,body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url(space.jpg);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+body {
+  background-image: url(trivia.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }

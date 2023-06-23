@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,18 +16,40 @@
             <li><a href="drinking.html">Drinking Game</a></li>
             <li><a href="smalltalk.html">Small Talk</a></li>
             <li><a href="trivia.html">Trivia</a></li>
+            <li><a href="jokes.html">Jokes/Fun Facts</a></li>
           </ul>
         </nav>
-      </header>
+    </header>
+   
+    <h1>Word Guesser</h1>
+  <p>Make your guesses in all lower case! No spaces in between words, sorry!</p>
+  <p id="word"></p>
+  <p id="guesses"></p>
+  <p id="message"></p>
+  <form>
+    <input type="text" id="guess" placeholder="Guess a letter..." disabled>
+    <input type="submit" value="Guess" disabled>
+  </form>
+  <button id="restart">Restart</button>
+  <!-- <p id="win-streak">Win streak: 0</p> -->
+  <img id="win-image" src="" alt="">
     
-    
-    
-    
-    
+
+    <!-- <div class="container">
+      <div id="options-container"></div>
+      <div id="letter-container" class="letter-container hide"></div>
+      <div id="user-input-section"></div>
+      <canvas id="canvas"></canvas>
+      <div id="new-game-container" class="new-game-popup hide">
+        <div id="result-text"></div>
+        <button id="new-game-button">New Game</button>
+      </div>
+    </div> -->
     
     <footer>
         With questions or new ideas, email <a href="mailto:derek1896@gmail.com">derek1896@gmail.com</a>
-      </footer>
-      <script src="hangman.js"></script>
+    </footer>
+    
+    <script src="hangman.js"></script>
 </body>
 </html>

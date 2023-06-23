@@ -5,11 +5,13 @@ html,body {
         font-family: Arial, sans-serif;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
       
 }
 
 body {
-    background-image: url(space.jpg);
+    background-image: url(hangman.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -41,6 +43,13 @@ body {
 nav ul li a:hover {
   background-color: #555;
 }
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
 
 footer {
     background-color: #333;
@@ -58,3 +67,75 @@ footer {
   footer a:hover {
     text-decoration: underline;
   }
+  #hangman {
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  #word {
+    font-size: 48px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 20px;
+  }
+  
+  #guesses {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #message {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  form {
+    margin-top: 30px;
+  }
+  
+  input[type="text"] {
+    font-size: 24px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+  }
+  
+  input[type="submit"] {
+    font-size: 24px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:disabled {
+    background-color: #ccc;
+    color: #999;
+    cursor: default;
+  }
+  
+  /* Add this to your CSS file */
+  #win-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  #restart {
+    font-size: 18px; /* Adjust the font size as desired */
+    padding: 5px 10px; /* Adjust the padding as desired */
+    border-radius: 4px;
+    display: inline-block;
+    width: 200px;
+  }
+  
+
+
+  

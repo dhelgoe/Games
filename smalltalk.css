@@ -1,9 +1,28 @@
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url(space.jpg);
+    background-image: url(new1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   header {
