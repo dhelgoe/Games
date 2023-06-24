@@ -1,7 +1,7 @@
 
 
    html,body {
-    height: 100%;
+    /* height: 100%; */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -9,10 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
-}
-
-
+  }
 body {
   background-image: url(space.jpg);
 background-size: cover;
@@ -45,11 +42,6 @@ background-repeat: no-repeat;
 nav ul li a:hover {
   background-color: #555;
 }
-  
-  /* nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  } */
   
   main {
     max-width: 800px;
@@ -93,21 +85,21 @@ nav ul li a:hover {
   }
   
   .earth-container {
-    flex-shrink: 0; /* Prevents the Earth container from shrinking */
+    flex-shrink: 0; 
   }
   
   .earth-image {
-    width: 150px; /* Adjust the width as needed */
-    margin-right: 20px; /* Adjust the spacing between the image and content */
+    width: 150px; 
+    margin-right: 20px; 
   }
   
   .content {
-    flex-grow: 1; /* Allows the content to grow and fill remaining space */
+    flex-grow: 1; 
   }
   
   
    @media (max-width: 768px) {
-    Adjust the styles as needed to fit smaller screens */
+
      header {
       padding: 10px;
     }

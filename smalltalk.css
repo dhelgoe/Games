@@ -67,6 +67,10 @@ body {
   
   h1 {
     color: #ffffff;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
   }
   
   p {
