@@ -1,11 +1,4 @@
-/* body {
-    margin: 0;
-    padding: 0;
-    background-image: url(space.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-   */
+
 
    html,body {
     height: 100%;
@@ -19,8 +12,9 @@
   
 }
 
+
 body {
-background-image: url(space.jpg);
+  background-image: url(space.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 }
@@ -112,9 +106,9 @@ nav ul li a:hover {
   }
   
   
-  @media (max-width: 768px) {
-    /* Adjust the styles as needed to fit smaller screens */
-    header {
+   @media (max-width: 768px) {
+    Adjust the styles as needed to fit smaller screens */
+     header {
       padding: 10px;
     }
 
