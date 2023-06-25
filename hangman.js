@@ -500,6 +500,11 @@ const words = [
   "Taser",
   "Lasso",
 ];
+
+
+
+console.log(words);
+
 const maxWrongGuesses = 8;
 let wrongGuesses = 0;
 let answer = "";
@@ -507,88 +512,87 @@ let guessedLetters = [];
 let winSteak = 0;
 const winImageUrl = "winner-illustration.jpg";
 
-
 function startGame() {
   // Choose a random word from the words array
   answer = words[Math.floor(Math.random() * words.length)];
-  
-  // Replace non-letter characters with empty string
-  const cleanedAnswer = answer.replace(/[^a-z]/g, "");
-  
+
   // Initialize guessedLetters array with underscores and spaces
-  guessedLetters = cleanedAnswer.split("").map(char => {
+  guessedLetters = answer.split("").map(char => {
     if (char === " ") {
       return " ";
     } else {
       return "_";
     }
   });
-  
+
   // Display the word on the screen with underscores for the unguessed letters
   document.getElementById("word").innerHTML = guessedLetters.join(" ");
-  
+
   // Display the number of letters in the word
-  document.getElementById("message").innerHTML = `The word has ${cleanedAnswer.length} letters.`;
-  
+  document.getElementById("message").innerHTML = `The word has ${answer.length} letters.`;
+
   // Enable the input field and button
   const guessInput = document.getElementById("guess");
   guessInput.disabled = false;
   guessInput.focus();
   document.querySelector("form input[type='submit']").disabled = false;
-  
+
   // Add an event listener to the form
   document.querySelector("form").addEventListener("submit", guessLetter);
 }
 
 function guessLetter(event) {
   event.preventDefault();
-  
+
   // Get the value of the guess input
   const guessInput = document.getElementById("guess");
-  const guess = guessInput.value.toLowerCase();
-  
+  const guess = guessInput.value.charAt(0).toLowerCase();
+
   // Clear the guess input
   guessInput.value = "";
-  
+
   // Check if the guess is a letter
   if (!/[a-z]/.test(guess)) {
     document.getElementById("message").innerHTML = "Please enter a letter from a to z.";
     return;
   }
-  
+
   // Check if the letter has already been guessed
   if (guessedLetters.includes(guess)) {
     document.getElementById("message").innerHTML = "You have already guessed that letter.";
     return;
   }
-  
-  // Check if the letter is in the word
-  if (answer.includes(guess)) {
-    // Update the guessedLetters array with the correct letter(s)
-    for (let i = 0; i < answer.length; i++) {
-      if (answer[i] === guess) {
-        guessedLetters[i] = guess;
-      }
-    }
-    
-    // Display the updated guessedLetters array on the screen
-    document.getElementById("word").innerHTML = guessedLetters.join(" ");
-    
-    // Check if the user has won the game
-    if (!guessedLetters.includes("_")) {
-      document.getElementById("message").innerHTML = "Congratulations, you won!";
-      guessInput.disabled = true;
-      document.querySelector("form input[type='submit']").disabled = true;
-      return;
-    }
 
-  } else {
+  // Update the guessedLetters array and the displayed word
+  let letterFound = false;
+  let updatedWord = "";
+  for (let i = 0; i < answer.length; i++) {
+    if (answer[i].toLowerCase() === guess) {
+      guessedLetters[i] = answer[i];
+      letterFound = true;
+    }
+    updatedWord += guessedLetters[i] + " ";
+  }
+
+  // Display the updated word on the screen
+  document.getElementById("word").innerHTML = updatedWord;
+
+  // Check if the user has won the game
+  if (!guessedLetters.includes("_")) {
+    document.getElementById("message").innerHTML = "Congratulations, you won!";
+    guessInput.disabled = true;
+    document.querySelector("form input[type='submit']").disabled = true;
+    return;
+  }
+
+  // Check if the letter is not in the word
+  if (!letterFound) {
     // Update the wrongGuesses counter
     wrongGuesses++;
-    
+
     // Display the updated wrongGuesses counter on the screen
     document.getElementById("guesses").innerHTML = `Wrong guesses: ${wrongGuesses}/${maxWrongGuesses}`;
-    
+
     // Check if the user has lost the game
     if (wrongGuesses === maxWrongGuesses) {
       document.getElementById("message").innerHTML = `Sorry, you lost. The word was "${answer}".`;
@@ -597,10 +601,14 @@ function guessLetter(event) {
       return;
     }
   }
-  
+
+  // Add the guessed letter to the guessedLetters array
+  guessedLetters.push(guess);
+
   // Display a message to make another guess
   document.getElementById("message").innerHTML = "Guess another letter.";
 }
+
 
 
 // event listener for restart button 
