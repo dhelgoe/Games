@@ -13,7 +13,7 @@ html,body {
 
 
 body {
-  background-image: url(trivia.jpg);
+  background-image: url(../background/trivia.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }

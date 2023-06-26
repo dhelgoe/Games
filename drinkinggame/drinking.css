@@ -11,7 +11,7 @@ html, body {
 
 body {
   
-    background-image: url(drinkinggame.jpg);
+    background-image: url(../background/drinkinggame.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     

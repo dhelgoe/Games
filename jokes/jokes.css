@@ -11,7 +11,7 @@ html,body {
 }
 
 body {
-background-image: url(jokes.jpg);
+background-image: url(../background/jokes.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 }

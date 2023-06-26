@@ -11,7 +11,7 @@ html,body {
 }
 
 body {
-    background-image: url(hangman.jpg);
+    background-image: url(../background/hangman.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }

@@ -13,7 +13,7 @@ html,body {
 
 
 body {
-    background-image: url(new1.jpg);
+    background-image: url(../background/new1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
