@@ -105,7 +105,7 @@ body {
   
   .next-button-container {
   position: absolute;
-  bottom: 200px; /*adjust the location of the next button up/down */
+  bottom: 120px; /*adjust the location of the next button up/down */
   left: 50%;
   transform: translateX(-50%);
     
@@ -144,7 +144,6 @@ body {
   }
 
   @media (max-width: 768px) {
-    /* Adjust the styles as needed to fit smaller screens */
     header {
       padding: 10px;
     }
