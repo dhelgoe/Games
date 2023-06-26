@@ -74,6 +74,7 @@ body {
     align-items: center;
     height: 70vh;
   }
+
   
   .card {
     background-color: black;
@@ -105,11 +106,12 @@ body {
   
   .next-button-container {
   position: absolute;
-  bottom: 120px; /*adjust the location of the next button up/down */
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
     
-  }
+  } 
+ 
   
   #next-button {
     padding: 10px 20px;
