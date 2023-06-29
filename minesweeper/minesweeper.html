@@ -4,42 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="jokes.css">
+    <link rel="stylesheet" href="minesweeper.css">
 </head>
 <body>
     <header>
         <nav>
           <ul>
             <li><a href="../index.html">Home</a></li>
+            <li><a href="../trivia/trivia.html">Trivia Game</a></li>
             <li><a href="../drinkinggame/drinking.html">Drinking Game</a></li>
             <li><a href="../smalltalk/smalltalk.html">Small Talk</a></li>
-            <li><a href="../trivia/trivia.html">Trivia</a></li>
             <li><a href="../hangman/hangman.html">Word Guesser</a></li>
+            <li><a href="../jokes/jokes.html">Jokes/Fun Facts</a></li>
             <li><a href="../geo/geo.html">Geography</a></li>
-            <li><a href="../minesweeper/minesweeper.html">Minesweeper</a></li>
-            
           </ul>
         </nav>
-    </header>
-    
-    <h1>Jokes & Fun Facts</h1>
-    
-    <div class="card-container">
-    <div class="joke-card">
-      <div class="joke-text"></div>
-      <button id="new-joke-button">New Joke</button>
-  </div>
-  
-  <div class="fun-fact-card">
-    <div class="fun-fact-text"></div>
-    <button id="new-fun-fact-button">Fun Fact</button>
-</div>
-</div>
+      </header>
+
+
+    <h1>Total Mines: <span id="mines-count">0</span></h1>
+    <div id="board"></div>
+    <button id="reset-button" style="display: none;">Reset</button>
+
     
     <footer>
         With questions or new ideas, email <a href="mailto:derek1896@gmail.com">derek1896@gmail.com</a>
     </footer>
     
-    <script src="jokes.js"></script>
+    <script src="minesweeper.js"></script>
 </body>
 </html>

@@ -17,8 +17,11 @@ background-repeat: no-repeat;
 }
 
 header {
-background-color: #333;
-padding: 20px;
+/* background-color: #333; */
+background-image: url(../background/navstars.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+padding: 30px;
 }
 
 nav ul {
@@ -34,7 +37,7 @@ margin-right: 10px;
 nav ul li a {
 color: #fff;
 text-decoration: none;
-font-size: 18px;
+font-size: 24px;
 padding: 10px;
 border-radius: 4px;
 transition: background-color 0.3s;
@@ -45,7 +48,10 @@ background-color: #555;
 }
 
 footer {
-background-color: #333;
+/* background-color: #333; */
+background-image: url(../background/navstars.jpg);
+background-repeat: no-repeat;
+background-size: cover;
 color: #fff;
 padding: 10px;
 text-align: center;
@@ -76,7 +82,10 @@ h1 {
   }
   
   .joke-card {
-    background-color:black;
+    /* background-color:black; */
+    background-image: url(../background/jokeufo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -90,7 +99,10 @@ h1 {
     color: white;
   }
   .fun-fact-card {
-    background-color: black;
+    /* background-color: black; */
+    background-image: url(../background/jokeufo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
