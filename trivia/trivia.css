@@ -160,7 +160,7 @@ p {
 
 .next-button-container {
   position: absolute;
-  bottom: 80px; /* Adjust the distance from the bottom as needed */
+  bottom: 60px; /* Adjust the distance from the bottom as needed */
   left: 50%;
   transform: translateX(-50%);
 }
